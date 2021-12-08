@@ -49,7 +49,7 @@ def hyper_parameters():
                         help="L2 normalization penality")
     params.add_argument("--batch_size",
                         type=int,
-                        default=10,
+                        default=32,
                         help="Batch Size")
     args = params.parse_args(args=[])
     return args
