@@ -78,7 +78,7 @@ class FormulaGraphDataset(InMemoryDataset):
         raw_examples = \
             [json.loads(line) for line in read_file(self.raw_paths[0])]
         dataList = []
-        for example in raw_examples[:100]:
+        for example in raw_examples:
             conj, prem, label = example
             conj_graph = Graph(fof_formula_transformer(self.statements[conj]),
                                rename=self.rename)
